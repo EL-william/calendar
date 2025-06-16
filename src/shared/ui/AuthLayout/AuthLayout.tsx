@@ -14,9 +14,6 @@ export const AuthLayout: React.FC<AuthLayoutProps> = ({
 }) => {
   return (
     <div className={styles.container}>
-      <div className={styles.background}>
-        <div className={styles.backgroundPattern}></div>
-      </div>
       <div className={styles.content}>
         <div className={styles.formContainer}>
           <div className={styles.logo}>

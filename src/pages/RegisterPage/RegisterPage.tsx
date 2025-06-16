@@ -19,7 +19,9 @@ export const RegisterPage: React.FC = () => {
         setTimeout(() => {
           // Simulate user registration
           if (credentials.email === "existing@example.com") {
-            reject(new Error("An account with this email already exists"));
+            reject(
+              new Error("Аккаунт с такой электронной почтой уже существует"),
+            );
           } else {
             resolve(true);
           }
@@ -30,7 +32,7 @@ export const RegisterPage: React.FC = () => {
       navigate("/dashboard");
     } catch (err) {
       setError(
-        err instanceof Error ? err.message : "An unexpected error occurred",
+        err instanceof Error ? err.message : "Произошла неожиданная ошибка",
       );
     } finally {
       setIsLoading(false);
@@ -39,8 +41,8 @@ export const RegisterPage: React.FC = () => {
 
   return (
     <AuthLayout
-      title="Create your account"
-      subtitle="Join Calendorny to organize your tasks and boost your productivity"
+      title="Создайте аккаунт"
+      subtitle="Присоединяйтесь к Calendorny для организации задач и повышения продуктивности"
     >
       <RegisterForm
         onSubmit={handleRegister}

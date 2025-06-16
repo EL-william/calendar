@@ -24,7 +24,7 @@ export const LoginPage: React.FC = () => {
           ) {
             resolve(true);
           } else {
-            reject(new Error("Invalid email or password"));
+            reject(new Error("Неверная электронная почта или пароль"));
           }
         }, 1500);
       });
@@ -33,7 +33,7 @@ export const LoginPage: React.FC = () => {
       navigate("/dashboard");
     } catch (err) {
       setError(
-        err instanceof Error ? err.message : "An unexpected error occurred",
+        err instanceof Error ? err.message : "Произошла неожиданная ошибка",
       );
     } finally {
       setIsLoading(false);
@@ -42,8 +42,8 @@ export const LoginPage: React.FC = () => {
 
   return (
     <AuthLayout
-      title="Welcome back"
-      subtitle="Sign in to your Calendorny account to manage your tasks and schedule"
+      title="Добро пожаловать!"
+      subtitle="Войдите в свой аккаунт Calendorny для управления задачами и расписанием"
     >
       <LoginForm onSubmit={handleLogin} isLoading={isLoading} error={error} />
     </AuthLayout>

@@ -6,12 +6,12 @@ import {
 
 export const validateEmail = (email: string): string | undefined => {
   if (!email) {
-    return "Email is required";
+    return "Электронная почта обязательна";
   }
 
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailRegex.test(email)) {
-    return "Please enter a valid email address";
+    return "Введите корректный адрес электронной почты";
   }
 
   return undefined;
@@ -19,15 +19,15 @@ export const validateEmail = (email: string): string | undefined => {
 
 export const validatePassword = (password: string): string | undefined => {
   if (!password) {
-    return "Password is required";
+    return "Пароль обязателен";
   }
 
   if (password.length < 8) {
-    return "Password must be at least 8 characters long";
+    return "Пароль должен содержать минимум 8 символов";
   }
 
   if (!/(?=.*[a-z])(?=.*[A-Z])(?=.*\d)/.test(password)) {
-    return "Password must contain at least one uppercase letter, one lowercase letter, and one number";
+    return "Пароль должен содержать заглавную букву, строчную букву и цифру";
   }
 
   return undefined;
@@ -35,11 +35,11 @@ export const validatePassword = (password: string): string | undefined => {
 
 export const validateName = (name: string): string | undefined => {
   if (!name) {
-    return "Name is required";
+    return "Имя обязательно";
   }
 
   if (name.length < 2) {
-    return "Name must be at least 2 characters long";
+    return "Имя должно содержать минимум 2 символа";
   }
 
   return undefined;
@@ -50,11 +50,11 @@ export const validateConfirmPassword = (
   confirmPassword: string,
 ): string | undefined => {
   if (!confirmPassword) {
-    return "Please confirm your password";
+    return "Подтвердите пароль";
   }
 
   if (password !== confirmPassword) {
-    return "Passwords do not match";
+    return "Пароли не совпадают";
   }
 
   return undefined;
