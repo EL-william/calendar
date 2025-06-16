@@ -30,43 +30,6 @@
   }
 }
 
-.divider {
-  display: flex;
-  align-items: center;
-  margin: $spacing-lg 0;
-  color: $text-secondary;
-  font-size: $font-size-sm;
-
-  &::before,
-  &::after {
-    content: "";
-    flex: 1;
-    height: 1px;
-    background-color: $border-light;
-  }
-
-  span {
-    padding: 0 $spacing-md;
-    background-color: $surface-white;
-  }
-}
-
-.googleButton {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: $spacing-md;
-  margin-bottom: $spacing-lg;
-
-  &:hover {
-    border-color: $border-medium;
-  }
-}
-
-.googleIcon {
-  flex-shrink: 0;
-}
-
 .signupPrompt {
   text-align: center;
   font-size: $font-size-md;
