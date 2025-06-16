@@ -1,0 +1,119 @@
+.container {
+  position: relative;
+  margin-bottom: $spacing-lg;
+}
+
+.inputWrapper {
+  position: relative;
+}
+
+.input {
+  width: 100%;
+  padding: $spacing-md $spacing-md 8px $spacing-md;
+  font-size: $font-size-lg;
+  background-color: transparent;
+  border: 1px solid $border-light;
+  border-radius: $border-radius-sm;
+  transition: all $transition-fast;
+
+  &:focus {
+    border-color: $primary-blue;
+    outline: none;
+  }
+
+  &:focus + .label,
+  &:not(:placeholder-shown) + .label {
+    transform: translateY(-50%) scale(0.75);
+    color: $primary-blue;
+  }
+}
+
+.label {
+  position: absolute;
+  left: $spacing-md;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: $font-size-lg;
+  color: $text-secondary;
+  background-color: $surface-white;
+  padding: 0 $spacing-xs;
+  pointer-events: none;
+  transition: all $transition-fast;
+  transform-origin: left center;
+}
+
+.required {
+  color: $error-red;
+  margin-left: 2px;
+}
+
+.passwordToggle {
+  position: absolute;
+  right: $spacing-md;
+  top: 50%;
+  transform: translateY(-50%);
+  color: $text-secondary;
+  cursor: pointer;
+  transition: color $transition-fast;
+
+  &:hover {
+    color: $text-primary;
+  }
+}
+
+.errorMessage {
+  margin-top: $spacing-xs;
+  font-size: $font-size-sm;
+  color: $error-red;
+}
+
+// States
+.focused {
+  .input {
+    border-color: $primary-blue;
+    border-width: 2px;
+  }
+
+  .label {
+    color: $primary-blue;
+  }
+}
+
+.hasValue {
+  .label {
+    transform: translateY(-50%) scale(0.75);
+    color: $text-secondary;
+  }
+}
+
+.error {
+  .input {
+    border-color: $error-red;
+  }
+
+  .label {
+    color: $error-red;
+  }
+
+  .focused & {
+    .input {
+      border-color: $error-red;
+    }
+
+    .label {
+      color: $error-red;
+    }
+  }
+}
+
+.disabled {
+  .input {
+    background-color: $surface-light;
+    color: $text-disabled;
+    cursor: not-allowed;
+  }
+
+  .label {
+    color: $text-disabled;
+  }
+}

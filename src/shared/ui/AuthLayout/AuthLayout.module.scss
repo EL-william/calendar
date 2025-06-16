@@ -1,0 +1,160 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+      linear-gradient(45deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%),
+      linear-gradient(-45deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%),
+      linear-gradient(45deg, transparent 75%, rgba(255, 255, 255, 0.1) 75%),
+      linear-gradient(-45deg, transparent 75%, rgba(255, 255, 255, 0.1) 75%);
+    background-size: 60px 60px;
+    background-position:
+      0 0,
+      0 30px,
+      30px -30px,
+      -30px 0px;
+    animation: movePattern 20s linear infinite;
+  }
+}
+
+.backgroundPattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.1;
+  background-image:
+    radial-gradient(circle at 20% 50%, white 2px, transparent 2px),
+    radial-gradient(circle at 80% 50%, white 2px, transparent 2px),
+    radial-gradient(circle at 40% 20%, white 1px, transparent 1px),
+    radial-gradient(circle at 60% 80%, white 1px, transparent 1px);
+  background-size:
+    200px 200px,
+    200px 200px,
+    100px 100px,
+    100px 100px;
+}
+
+@keyframes movePattern {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  100% {
+    transform: translateX(60px) translateY(60px);
+  }
+}
+
+.content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: $spacing-lg;
+  position: relative;
+  z-index: 1;
+}
+
+.formContainer {
+  background: $surface-white;
+  border-radius: $border-radius-lg;
+  box-shadow: $shadow-lg;
+  padding: $spacing-xxl;
+  width: 100%;
+  max-width: 400px;
+
+  @media (max-width: $mobile) {
+    padding: $spacing-lg;
+    margin: $spacing-md;
+    max-width: none;
+  }
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: $spacing-xl;
+  gap: $spacing-md;
+}
+
+.logoIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logoText {
+  font-size: $font-size-xxl;
+  font-weight: 500;
+  color: $text-primary;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: $spacing-xl;
+}
+
+.title {
+  font-size: $font-size-title;
+  font-weight: 400;
+  color: $text-primary;
+  margin-bottom: $spacing-sm;
+  line-height: 1.3;
+}
+
+.subtitle {
+  font-size: $font-size-md;
+  color: $text-secondary;
+  line-height: 1.4;
+}
+
+.form {
+  width: 100%;
+}
+
+// Responsive adjustments
+@media (max-width: $tablet) {
+  .formContainer {
+    max-width: 380px;
+  }
+}
+
+@media (max-width: $mobile) {
+  .background {
+    &::before {
+      background-size: 40px 40px;
+      background-position:
+        0 0,
+        0 20px,
+        20px -20px,
+        -20px 0px;
+    }
+  }
+
+  .title {
+    font-size: $font-size-xl;
+  }
+
+  .logoText {
+    font-size: $font-size-xl;
+  }
+}
