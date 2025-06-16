@@ -1,0 +1,86 @@
+.form {
+  width: 100%;
+}
+
+.errorAlert {
+  background-color: $error-red-light;
+  color: $error-red;
+  padding: $spacing-md;
+  border-radius: $border-radius-sm;
+  margin-bottom: $spacing-lg;
+  font-size: $font-size-md;
+  border: 1px solid rgba($error-red, 0.2);
+}
+
+.forgotPassword {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: $spacing-lg;
+}
+
+.forgotPasswordLink {
+  color: $primary-blue;
+  font-size: $font-size-md;
+  text-decoration: none;
+  transition: color $transition-fast;
+
+  &:hover {
+    color: $primary-blue-hover;
+    text-decoration: underline;
+  }
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  margin: $spacing-lg 0;
+  color: $text-secondary;
+  font-size: $font-size-sm;
+
+  &::before,
+  &::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background-color: $border-light;
+  }
+
+  span {
+    padding: 0 $spacing-md;
+    background-color: $surface-white;
+  }
+}
+
+.googleButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: $spacing-md;
+  margin-bottom: $spacing-lg;
+
+  &:hover {
+    border-color: $border-medium;
+  }
+}
+
+.googleIcon {
+  flex-shrink: 0;
+}
+
+.signupPrompt {
+  text-align: center;
+  font-size: $font-size-md;
+  color: $text-secondary;
+}
+
+.signupLink {
+  color: $primary-blue;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color $transition-fast;
+
+  &:hover {
+    color: $primary-blue-hover;
+    text-decoration: underline;
+  }
+}
