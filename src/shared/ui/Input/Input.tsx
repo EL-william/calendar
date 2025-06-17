@@ -29,14 +29,12 @@ export const Input: React.FC<InputProps> = ({
   const [focused, setFocused] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
 
-  const hasValue = value.length > 0;
   const isPassword = type === "password";
   const inputType = isPassword && showPassword ? "text" : type;
 
   const containerClass = [
     styles.container,
     focused && styles.focused,
-    hasValue && styles.hasValue,
     error && styles.error,
     disabled && styles.disabled,
     className,
@@ -46,6 +44,10 @@ export const Input: React.FC<InputProps> = ({
 
   return (
     <div className={containerClass}>
+      <label className={styles.label}>
+        {label}
+        {required && <span className={styles.required}>*</span>}
+      </label>
       <div className={styles.inputWrapper}>
         <input
           type={inputType}
@@ -61,10 +63,6 @@ export const Input: React.FC<InputProps> = ({
           disabled={disabled}
           required={required}
         />
-        <label className={styles.label}>
-          {label}
-          {required && <span className={styles.required}>*</span>}
-        </label>
         {isPassword && (
           <button
             type="button"
