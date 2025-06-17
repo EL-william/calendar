@@ -1,16 +1,16 @@
 # Calendorny - Task Calendar Application
 
-A modern task calendar application built with React, TypeScript, and SCSS modules, featuring Google-inspired design language.
+Современное приложение-календарь задач, построенное на React, TypeScript и SCSS модулях с минималистичным дизайном.
 
-## 🚀 Current Features
+## 🚀 Текущий функционал
 
-### Authentication Pages
+### Страницы аутентификации
 
-- **Login Page**: Clean, professional login form with Google Material Design elements
-- **Registration Page**: User-friendly registration form with validation
-- **Google-Style UI**: Modern buttons, inputs, and layout inspired by Google's design language
-- **Form Validation**: Real-time validation with clear error messages
-- **Responsive Design**: Optimized for all screen sizes
+- **Страница входа**: Чистая, профессиональная форма входа с русским интерфейсом
+- **Страница регистрации**: Удобная форма регистрации с валидацией
+- **Минималистичный UI**: Современные кнопки, поля ввода и макет
+- **Валидация форм**: Валидация в реальном времени с понятными сообщениями об ошибках
+- **Адаптивный дизайн**: Оптимизировано для всех размеров экранов
 
 ## 🛠 Technology Stack
 
@@ -27,14 +27,14 @@ The project follows Feature-Sliced Design (FSD) architecture:
 
 ```
 src/
-├── app/              # Application configuration and entry point
-├── entities/         # Business entities (auth, user, etc.)
-├── features/         # Feature-specific logic (LoginForm, RegisterForm)
-├── pages/            # Page components (LoginPage, RegisterPage)
-├── shared/           # Shared utilities, components, and styles
-│   ├── ui/           # Reusable UI components (Button, Input, AuthLayout)
-│   └── styles/       # Global styles and SCSS variables
-└── widgets/          # Complex UI widgets (planned for future)
+├── app/              # Конфигурация приложения и точка входа
+├── entities/         # Бизнес-сущности (auth, user, и т.д.)
+├── features/         # Логика функций (LoginForm, RegisterForm)
+├── pages/            # Компоненты страниц (LoginPage, RegisterPage)
+├── shared/           # Общие утилиты, компоненты и стили
+│   ├── ui/           # Переиспользуемые UI компоненты (Button, Input, AuthLayout)
+│   └── styles/       # Глобальные стили и SCSS переменные
+└── widgets/          # Сложные UI виджеты (планируются в будущем)
 ```
 
 ## 🎨 Design System
