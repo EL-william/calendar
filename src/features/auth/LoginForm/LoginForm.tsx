@@ -63,6 +63,7 @@ export const LoginForm: React.FC<LoginFormProps> = ({
       <Input
         label="Электронная почта"
         type="email"
+        placeholder="Введите email"
         value={credentials.email}
         onChange={(value) => handleInputChange("email", value)}
         onBlur={() => handleInputBlur("email")}
@@ -73,6 +74,7 @@ export const LoginForm: React.FC<LoginFormProps> = ({
       <Input
         label="Пароль"
         type="password"
+        placeholder="Введите пароль"
         value={credentials.password}
         onChange={(value) => handleInputChange("password", value)}
         onBlur={() => handleInputBlur("password")}
@@ -93,7 +95,7 @@ export const LoginForm: React.FC<LoginFormProps> = ({
         fullWidth
         disabled={isLoading}
       >
-        {isLoading ? "Вход..." : "Войти"}
+        {isLoading ? "В��од..." : "Войти"}
       </Button>
 
       <div className={styles.signupPrompt}>

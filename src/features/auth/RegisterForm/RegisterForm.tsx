@@ -73,6 +73,7 @@ export const RegisterForm: React.FC<RegisterFormProps> = ({
       <Input
         label="Полное имя"
         type="text"
+        placeholder="Введите ваше имя"
         value={credentials.name}
         onChange={(value) => handleInputChange("name", value)}
         onBlur={() => handleInputBlur("name")}
@@ -83,6 +84,7 @@ export const RegisterForm: React.FC<RegisterFormProps> = ({
       <Input
         label="Электронная почта"
         type="email"
+        placeholder="Введите email"
         value={credentials.email}
         onChange={(value) => handleInputChange("email", value)}
         onBlur={() => handleInputBlur("email")}
@@ -93,6 +95,7 @@ export const RegisterForm: React.FC<RegisterFormProps> = ({
       <Input
         label="Пароль"
         type="password"
+        placeholder="Введите пароль"
         value={credentials.password}
         onChange={(value) => handleInputChange("password", value)}
         onBlur={() => handleInputBlur("password")}
@@ -103,6 +106,7 @@ export const RegisterForm: React.FC<RegisterFormProps> = ({
       <Input
         label="Подтвердите пароль"
         type="password"
+        placeholder="Повторите пароль"
         value={credentials.confirmPassword}
         onChange={(value) => handleInputChange("confirmPassword", value)}
         onBlur={() => handleInputBlur("confirmPassword")}
